@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Footer from "./components/Footer";
-import { Header } from "./components/Header";
+import Header from "./components/Header";
 import "./index.scss";
 
 const App = () => (
