@@ -7,6 +7,11 @@ module.exports = {
     publicPath: "http://localhost:3001/",
   },
 
+  externalsPresets: {
+    web: false,
+    webAsync: true,
+  },
+
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
@@ -27,13 +32,13 @@ module.exports = {
       },
       {
         test: /\.(css|s[ac]ss)$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader", "url-loader"],
       },
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "url-loader",
         },
       },
     ],
